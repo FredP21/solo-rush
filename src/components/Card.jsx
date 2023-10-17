@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./Card.scss"
+import PropTypes from 'prop-types';
+import "./Card.scss";
 
 
 const Card = ({name, image, adress, price, note, description, reserved}) => {
@@ -35,5 +36,15 @@ const Card = ({name, image, adress, price, note, description, reserved}) => {
         </section>
     );
 };
+Card.propTypes = {
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    adress: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    note: PropTypes.string.isRequired, 
+    reserved: PropTypes.bool.isRequired
+
+}
 
 export default Card;

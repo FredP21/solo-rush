@@ -1,4 +1,5 @@
 import Card from "./Card";
+import PropTypes from "prop-types"
 import "./Cardlist.scss";
 
 const Cardlist = ({data}) => {
@@ -19,5 +20,9 @@ const Cardlist = ({data}) => {
         </div>
     );
 };
+
+Cardlist.propTypes = {
+    data: PropTypes.array.isRequired
+}
 
 export default Cardlist;
