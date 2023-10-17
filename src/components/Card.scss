@@ -1,0 +1,71 @@
+
+
+.restContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 35rem;
+    margin:1rem auto;
+    border-radius: 10px; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(249, 220, 220, 0.368) 0px 18px 36px -18px inset;
+    
+    img {
+        width:98%;
+        height: auto;
+    }
+        
+        p{
+            height: 40%;
+        }
+        
+    .noteOf {
+        padding-top:0.3rem;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+     }
+     .star {
+        color: yellow
+     }
+     .endOfCard{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.3rem;
+     }
+
+     .btn2 {
+        padding: 10px 40px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        color: black;
+        
+        background-color: lightgrey;
+        border-bottom: 5px solid lightslategrey;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+     }
+     .btn2:active {
+        transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+        border-bottom: 1px solid;
+    }
+    .btn1 {
+        padding: 10px 40px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        color: red;
+        
+        background-color: lightgrey;
+        border-bottom: 5px solid lightslategrey;
+        transition: all 0.1s;
+        -webkit-transition: all 0.1s;
+     }
+     .btn1:active {
+        transform: translate(0px,5px);
+        -webkit-transform: translate(0px,5px);
+        border-bottom: 1px solid;
+    }
+} 
