@@ -1,8 +1,9 @@
 import Card from "./Card";
+import "./Cardlist.scss";
 
 const Cardlist = ({data}) => {
     return (
-        <div>
+        <div className="container">
            {data.map((food, i) => (
             <Card
             key={i}

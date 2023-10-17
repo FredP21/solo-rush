@@ -1,21 +1,37 @@
+import { useState } from "react";
+import "./Card.scss"
 
 
 const Card = ({name, image, adress, price, note, description, reserved}) => {
+
+    const [isReserved, setIsReserved] = useState({reserved})
+
+    const handleReserved = () => {
+        setIsReserved(!isReserved);
+    }
     return (
-        <section className="rest_container">
-          <div className="imgcontainer">
-            <img src={image} alt={name} />
-          </div>
+        <section className="restContainer">
+
             <h2 className="title">{name}</h2>
-            <div className="noteof">{note}<span className="star">★</span>
-          </div>
+            <img src={image} alt={name} />
+            <div className="noteOf">
             <span className="adresse">{adress}</span>
-            <span className="priceof">{price}</span>
+            <div>
+            {note}<span className="star">★</span>
+            </div>
+          </div>
         
           <p>
             {description}
           </p> 
-            <span className="btn2">Réservation</span> 
+          <div className="endOfCard">
+          <span className="priceOf">{price}</span>
+            <button 
+            onClick={handleReserved}
+            className={isReserved ? "btn2" : "btn1"}
+            
+            >{isReserved ? "Reservation" : "Vous avez réservé"}</button> 
+            </div>
         </section>
     );
 };
